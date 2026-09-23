@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif Bengali", "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-bengali: "Noto Serif Bengali", serif;
+}
+
+@layer base {
+  :root {
+    --font-serif: 'Noto Serif Bengali', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-bengali: 'Noto Serif Bengali', serif;
+    --brand-crimson: #c93d51;
+    --brand-dark-crimson: #9e2a3b;
+    --brand-light-rose: #fbf0f2;
+  }
+
+  body {
+    font-family: 'Noto Serif Bengali', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html[lang="bn"],
+  html[lang="bn"] body,
+  html[lang="bn"] button,
+  html[lang="bn"] input,
+  html[lang="bn"] textarea,
+  html[lang="bn"] select {
+    font-family: 'Noto Serif Bengali', serif;
+  }
+
+  h1, h2, h3, .font-serif, .font-serif-heading {
+    font-family: 'Noto Serif Bengali', var(--font-serif);
+  }
+}
+
+.font-bengali {
+  font-family: 'Noto Serif Bengali', serif;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(18, 16, 18, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 61, 81, 0.15);
+}
+
+.glass-card {
+  background: rgba(28, 25, 28, 0.72);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar for admin tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 61, 81, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 61, 81, 0.6);
+}

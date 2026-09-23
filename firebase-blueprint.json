@@ -1,0 +1,130 @@
+{
+  "entities": {
+    "subscribers": {
+      "title": "Subscribers",
+      "description": "Newsletter and launch alert subscribers",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Subscriber email address"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of subscription"
+        },
+        "source": {
+          "type": "string",
+          "description": "Subscription source page or campaign"
+        },
+        "status": {
+          "type": "string",
+          "description": "Active or unsubscribed status"
+        }
+      },
+      "required": ["email", "createdAt"]
+    },
+    "donations": {
+      "title": "Donations",
+      "description": "Pledges and donation records submitted by supporters",
+      "type": "object",
+      "properties": {
+        "donorName": {
+          "type": "string",
+          "description": "Donor full name or Anonymous"
+        },
+        "donorEmail": {
+          "type": "string",
+          "description": "Donor email for receipt"
+        },
+        "donorPhone": {
+          "type": "string",
+          "description": "Donor mobile number"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Donation amount"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code (e.g. BDT or USD)"
+        },
+        "method": {
+          "type": "string",
+          "description": "Payment method: bKash, Nagad, Rocket, Bank, or Card"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Fund purpose (e.g. Education, Emergency Relief, Healthcare)"
+        },
+        "transactionId": {
+          "type": "string",
+          "description": "Transaction ID or reference"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Submission timestamp"
+        },
+        "status": {
+          "type": "string",
+          "description": "Verification status: verified, pending"
+        }
+      },
+      "required": ["amount", "method", "createdAt"]
+    },
+    "siteConfig": {
+      "title": "Site Configuration",
+      "description": "Dynamic landing page settings and countdown date",
+      "type": "object",
+      "properties": {
+        "launchDate": {
+          "type": "string",
+          "description": "Target launch ISO date time"
+        },
+        "titleBn": {
+          "type": "string",
+          "description": "Bengali headline"
+        },
+        "titleEn": {
+          "type": "string",
+          "description": "English headline"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Contact phone"
+        },
+        "email": {
+          "type": "string",
+          "description": "Contact email"
+        },
+        "address": {
+          "type": "string",
+          "description": "Office address"
+        },
+        "facebookUrl": {
+          "type": "string",
+          "description": "Facebook page URL"
+        },
+        "linkedinUrl": {
+          "type": "string",
+          "description": "LinkedIn profile URL"
+        },
+        "instagramUrl": {
+          "type": "string",
+          "description": "Instagram handle URL"
+        },
+        "youtubeUrl": {
+          "type": "string",
+          "description": "YouTube channel URL"
+        },
+        "whatsappNumber": {
+          "type": "string",
+          "description": "WhatsApp contact number"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}
